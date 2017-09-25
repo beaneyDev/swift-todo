@@ -18,9 +18,12 @@ import Quick
 import Nimble
 
 class MockURLSession : URLSessionProtocol {
+    var nextData: Data?
+    var nextError: Error?
     var nextDataTask: URLSessionDataTaskProtocol = MockURLSessionDataTask()
     
     func dataTaskWithURL(url: URL, completionHandler: @escaping DataTaskResult) -> URLSessionDataTaskProtocol {
+        completionHandler(nextData, nil, nextError)
         return self.nextDataTask
     }
 }
@@ -34,8 +37,8 @@ class MockURLSessionDataTask: URLSessionDataTaskProtocol {
 
 class HTTPClient_Test: QuickSpec {
     override func spec() {
-        describe("Test for Network requests.") {
-            it("Should return a response for a valid request.", closure: {
+        describe("Flat network requests.") {
+            it("Should resume the session when called.", closure: {
                 let nextDataTask = MockURLSessionDataTask()
                 let mockSession = MockURLSession()
                 mockSession.nextDataTask = nextDataTask
@@ -45,9 +48,49 @@ class HTTPClient_Test: QuickSpec {
                 let _ = HTTPController().request(session: mockSession, url: url, completion: { (response) in })
                 expect(nextDataTask.hasResumed).to(beTrue())
             })
+            
+            it("should return data for a valid URL") {
+                let nextDataTask = MockURLSessionDataTask()
+                let mockSession = MockURLSession()
+                mockSession.nextDataTask = nextDataTask
+                
+                let expectedData = "{}".data(using: String.Encoding.utf8)
+                mockSession.nextData = expectedData
+                
+                let url = URL(string: "http://google.com")!
+                
+                var actualData: Data?
+                let _ = HTTPController().request(session: mockSession, url: url, completion: { (response) in
+                    if case let HTTPResponse.result(data: data) = response {
+                        actualData = data
+                    }
+                })
+                
+                expect(actualData).toEventually(equal(expectedData))
+            }
+            
+            it("should error when a network request fails") {
+                let nextDataTask = MockURLSessionDataTask()
+                let mockSession = MockURLSession()
+                mockSession.nextDataTask = nextDataTask
+                
+                let expectedError = NSError(domain: "test", code: 500, userInfo: [:]) as Error
+                mockSession.nextError = expectedError
+                
+                let url = URL(string: "http://google.com")!
+                
+                var actualError: Error?
+                let _ = HTTPController().request(session: mockSession, url: url, completion: { (response) in
+                    if case let HTTPResponse.error(error: error) = response {
+                        actualError = error
+                    }
+                })
+                
+                expect(actualError).toEventually(be(expectedError))
+            }
         }
         
-        describe("Integration test for network") {
+        describe("Integration tests") {
             it("should return data for a decent URL") {
                 let url = URL(string: "http://google.com")!
                 var data: Data?
