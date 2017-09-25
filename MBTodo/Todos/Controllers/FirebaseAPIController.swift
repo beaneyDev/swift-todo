@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-class FirebaseAPIController {
+class FirebaseTodoController {
     static func fetchTodos(uid: String, completion: @escaping (_ dict: Dictionary<String, Any>?, _ error: Error?) -> ()) {
         let ref = Database.database().reference()
         ref.child("users").child(uid).child("todos").observeSingleEvent(of: .value, with: { (snapshot) in

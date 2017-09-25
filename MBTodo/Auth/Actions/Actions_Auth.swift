@@ -1,5 +1,5 @@
 //
-//  Actions_Launch.swift
+//  Actions_Auth.swift
 //  MBTodo
 //
 //  Created by Matt Beaney on 21/09/2017.
@@ -13,7 +13,7 @@ import ReSwift
 
 ///Once authorisation is complete with GitHub and Firebase, this action sets the user on the main state.
 struct SetUser: Action {
-    var user: FirebaseAuth.User
+    var uid: String
 }
 
 ///If there is an error of any kind, show it.
@@ -35,20 +35,20 @@ class Actions_Auth {
     }
     
     /**
-     This function is called by the AppDelegate once GitHub redirect has completed.
      - parameters:
+     - UserType: This is supplied to bypass Firebase when Unit testing.
      - URL: The callback URL set in the GitHub portal.
      - returns: An async action that continues the authorisation chain.
-    */
-    static func fetchToken(url: URL) -> Store<State>.ActionCreator {
+     */
+    static func fetchToken(url: URL, fetcher: OAuthTokenFetcher, validator: OAuthTokenValidator) -> Store<State>.ActionCreator {
         return { state, store in
-            GitHubAPIController.fetchToken(url: url, completion: { (token, error) in
+            fetcher.fetchToken(url: url, completion: { (token, error) in
                 guard let token = token else {
                     store.dispatch(ShowAuthError(error: error))
                     return
                 }
                 
-                store.dispatch(self.authoriseWithAccessToken(token: token))
+                store.dispatch(authoriseWithAccessToken(token: token, validator: validator))
             })
             
             return nil
@@ -61,17 +61,16 @@ class Actions_Auth {
      - Token: The user-specific token returned by GitHub.
      - returns: An async action that completes authorisation, either with an error or a valid User object.
      */
-    static func authoriseWithAccessToken(token: String) -> Store<State>.ActionCreator {
+    static func authoriseWithAccessToken(token: String, validator: OAuthTokenValidator) -> Store<State>.ActionCreator {
         return { state, store in
-            let credential = GitHubAuthProvider.credential(withToken: token)
-            Auth.auth().signIn(with: credential) { (user, error) in
+            validator.validateToken(token: token, completion: { (user, error) in
                 guard let user = user else {
                     store.dispatch(ShowAuthError(error: error))
                     return
                 }
                 
-                store.dispatch(SetUser(user: user))
-            }
+                store.dispatch(SetUser(uid: user))
+            })
             
             return nil
         }

@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        store.dispatch(Actions_Auth.fetchToken(url: url))
+        store.dispatch(Actions_Auth.fetchToken(url: url, fetcher: GitHubAuthController(), validator: FirebaseAuthController()))
         return true
     }
 

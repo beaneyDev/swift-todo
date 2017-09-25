@@ -8,13 +8,18 @@
 
 import Foundation
 
-class GitHubAPIController {
-    static func fetchToken(url: URL, completion: @escaping (_ token: String?, _ error: Error?) -> ()) {
+class GitHubAuthController : OAuthTokenFetcher {
+    func fetchToken(url: URL, completion: @escaping (_ token: String?, _ error: Error?) -> ()) {
+        
+    }
+    
+    func fetchToken(networker: Networkable, url: URL, completion: @escaping (_ token: String?, _ error: Error?) -> ()) {
         let session = URLSession.shared
         var request = URLRequest(url: URL(string: GitHubStrings.tokenURL)!)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.httpMethod = "POST"
+        
         
         var code = url.absoluteString.components(separatedBy: "://?code=")[1]
         code = code.components(separatedBy: "&")[0]

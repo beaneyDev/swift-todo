@@ -14,6 +14,13 @@ target 'MBTodo' do
   target 'MBTodoTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Quick'
+    pod 'Nimble'
+    
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
+    pod 'ReSwift'
+    pod 'Firebase/Auth'
   end
 
   target 'MBTodoUITests' do

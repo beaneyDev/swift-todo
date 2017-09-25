@@ -11,11 +11,11 @@ import ReSwift
 import FirebaseAuth
 
 struct State_Auth : StateType {
-    var user: FirebaseAuth.User?
+    var uid: String?
 }
 
 extension State_Auth: Equatable {
     static func == (lhs: State_Auth, rhs: State_Auth) -> Bool {
-        return lhs.user == rhs.user
+        return lhs.uid == rhs.uid
     }
 }

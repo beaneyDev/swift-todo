@@ -17,11 +17,11 @@ struct SetTodos: Action {
 class Actions_Todo {
     static func startFetchTodos() -> Store<State>.ActionCreator {
         return { state, store in
-            guard let userID = state.authState.user?.uid else {
+            guard let userID = state.authState.uid else {
                 return nil
             }
             
-            FirebaseAPIController.fetchTodos(uid: userID, completion: { (result, error) in
+            FirebaseTodoController.fetchTodos(uid: userID, completion: { (result, error) in
                 guard let result = result else {
                     return
                 }

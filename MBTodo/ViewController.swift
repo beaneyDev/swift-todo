@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     var todosVM: TodosVM?
     
     ///State functions.
-    var authState   = State_Auth(user: nil)
+    var authState   = State_Auth(uid: nil)
     var todosState  = State_Todos(todos: [])
     
     override func viewDidLoad() {
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
 
 extension ViewController : StoreSubscriber {
     func newState(state: State) {
-        if state.authState.user != nil {
+        if state.authState.uid != nil {
             self.handleValidUser(state: state)
         } else {
             self.handleInvalidUser(state: state)

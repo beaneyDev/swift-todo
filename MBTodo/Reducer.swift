@@ -20,14 +20,14 @@ func authReducer(action: Action, state: State_Auth?) -> State_Auth {
     switch action {
     case let action as SetUser:
         if var newState = state {
-            newState.user = action.user
+            newState.uid = action.uid
             return newState
         }
     default:
         break
     }
     
-    return state ?? State_Auth(user: nil)
+    return state ?? State_Auth(uid: nil)
 }
 
 func todoReducer(action: Action, state: State_Todos?) -> State_Todos {

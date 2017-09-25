@@ -16,10 +16,10 @@ class GitHubStrings {
     static var REDIRECT_URI             : String = "https://oauth-forwarder.herokuapp.com/redir_mobile.php"
     
     static var authoriseURL : String {
-        return "\(DOMAIN)/\(AUTHORISE_ENDPOINT)?client_id=\(CLIENT_ID)&redirect_uri=\(REDIRECT_URI)"
+        return "\(DOMAIN)\(AUTHORISE_ENDPOINT)?client_id=\(CLIENT_ID)&redirect_uri=\(REDIRECT_URI)"
     }
     
     static var tokenURL: String {
-        return "\(DOMAIN)/\(TOKEN_ENDPOINT)"
+        return "\(DOMAIN)\(TOKEN_ENDPOINT)"
     }
 }

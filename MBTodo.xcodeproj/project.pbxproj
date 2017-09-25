@@ -10,6 +10,10 @@
 		48F5D244D28F56943F97C435 /* Pods_MBTodoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA906E683D153EBFADBF7D4 /* Pods_MBTodoUITests.framework */; };
 		5ED1AC0D9415A05FF7B3B4ED /* Pods_MBTodoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C1FD41A6404BB49C207FC5 /* Pods_MBTodoTests.framework */; };
 		A357F0618372A9B2202DED46 /* Pods_MBTodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24628AA967E4F906CDA34074 /* Pods_MBTodo.framework */; };
+		BE0A0EA61F77F1EC006F9EA4 /* HTTPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0A0EA51F77F1EC006F9EA4 /* HTTPController.swift */; };
+		BE1A5EF71F7986AE007BA647 /* HTTPClient_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1A5EF61F7986AE007BA647 /* HTTPClient_Test.swift */; };
+		BE1A5EFA1F7987C1007BA647 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1A5EF91F7987C1007BA647 /* URLSessionProtocol.swift */; };
+		BE1A5EFC1F798DE7007BA647 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1A5EFB1F798DE7007BA647 /* URLSession.swift */; };
 		BE2733F81F744C17004A7D66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2733F71F744C17004A7D66 /* AppDelegate.swift */; };
 		BE2733FA1F744C17004A7D66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2733F91F744C17004A7D66 /* ViewController.swift */; };
 		BE2733FD1F744C17004A7D66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2733FB1F744C17004A7D66 /* Main.storyboard */; };
@@ -19,12 +23,13 @@
 		BE2734181F744C17004A7D66 /* MBTodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2734171F744C17004A7D66 /* MBTodoUITests.swift */; };
 		BE2734281F744DB0004A7D66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE2734271F744DB0004A7D66 /* GoogleService-Info.plist */; };
 		BE27342A1F744E76004A7D66 /* FirebaseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2734291F744E76004A7D66 /* FirebaseWrapper.swift */; };
-		BE27343D1F745662004A7D66 /* Actions_Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE27343C1F745662004A7D66 /* Actions_Launch.swift */; };
 		BE2734401F7457D4004A7D66 /* Actions_Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE27343F1F7457D4004A7D66 /* Actions_Auth.swift */; };
 		BE2734471F745A3D004A7D66 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2734461F745A3D004A7D66 /* State.swift */; };
 		BE27344A1F745A98004A7D66 /* State_Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2734491F745A98004A7D66 /* State_Auth.swift */; };
 		BE27344C1F74664E004A7D66 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE27344B1F74664E004A7D66 /* Reducer.swift */; };
-		BEEE8E8D1F77B1530056F1A1 /* GitHubAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8E8C1F77B1530056F1A1 /* GitHubAPIController.swift */; };
+		BE4368A81F77D6060052D379 /* FirebaseAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4368A71F77D6060052D379 /* FirebaseAuthController.swift */; };
+		BE4368AD1F77E26C0052D379 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4368AC1F77E26C0052D379 /* Networkable.swift */; };
+		BEEE8E8D1F77B1530056F1A1 /* GitHubAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8E8C1F77B1530056F1A1 /* GitHubAuthController.swift */; };
 		BEEE8E911F77B1890056F1A1 /* Actions_Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8E901F77B1890056F1A1 /* Actions_Todo.swift */; };
 		BEEE8E941F77B23D0056F1A1 /* FirebaseAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8E931F77B23D0056F1A1 /* FirebaseAPIController.swift */; };
 		BEEE8E971F77B4280056F1A1 /* State_Todos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8E961F77B4280056F1A1 /* State_Todos.swift */; };
@@ -33,6 +38,9 @@
 		BEEE8EA11F77C0780056F1A1 /* TodosVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8EA01F77C0780056F1A1 /* TodosVM.swift */; };
 		BEEE8EA41F77C1520056F1A1 /* Todo_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8EA31F77C1520056F1A1 /* Todo_TableViewCell.swift */; };
 		BEEE8EA61F77C2130056F1A1 /* TodoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8EA51F77C2130056F1A1 /* TodoVM.swift */; };
+		BEEE8EA81F77C84E0056F1A1 /* Auth_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8EA71F77C84E0056F1A1 /* Auth_Tests.swift */; };
+		BEEE8EAA1F77C8D40056F1A1 /* GoogleService-Info-Test.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEEE8EA91F77C8D40056F1A1 /* GoogleService-Info-Test.plist */; };
+		BEEE8EAD1F77CD4C0056F1A1 /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8EAC1F77CD4C0056F1A1 /* OAuth.swift */; };
 		BEFA26D21F76FE650043FF3C /* GitHubStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFA26D11F76FE650043FF3C /* GitHubStrings.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +71,10 @@
 		674131A9E625A3AACD6FDCD8 /* Pods-MBTodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBTodo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MBTodo/Pods-MBTodo.debug.xcconfig"; sourceTree = "<group>"; };
 		6BA906E683D153EBFADBF7D4 /* Pods_MBTodoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MBTodoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0659D2CDE646732FC0090F /* Pods-MBTodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBTodo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MBTodo/Pods-MBTodo.release.xcconfig"; sourceTree = "<group>"; };
+		BE0A0EA51F77F1EC006F9EA4 /* HTTPController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPController.swift; sourceTree = "<group>"; };
+		BE1A5EF61F7986AE007BA647 /* HTTPClient_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient_Test.swift; sourceTree = "<group>"; };
+		BE1A5EF91F7987C1007BA647 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		BE1A5EFB1F798DE7007BA647 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		BE2733F41F744C17004A7D66 /* MBTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2733F71F744C17004A7D66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE2733F91F744C17004A7D66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,12 +90,13 @@
 		BE2734191F744C17004A7D66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE2734271F744DB0004A7D66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE2734291F744E76004A7D66 /* FirebaseWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseWrapper.swift; sourceTree = "<group>"; };
-		BE27343C1F745662004A7D66 /* Actions_Launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions_Launch.swift; sourceTree = "<group>"; };
 		BE27343F1F7457D4004A7D66 /* Actions_Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions_Auth.swift; sourceTree = "<group>"; };
 		BE2734461F745A3D004A7D66 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		BE2734491F745A98004A7D66 /* State_Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State_Auth.swift; sourceTree = "<group>"; };
 		BE27344B1F74664E004A7D66 /* Reducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
-		BEEE8E8C1F77B1530056F1A1 /* GitHubAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPIController.swift; sourceTree = "<group>"; };
+		BE4368A71F77D6060052D379 /* FirebaseAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuthController.swift; sourceTree = "<group>"; };
+		BE4368AC1F77E26C0052D379 /* Networkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
+		BEEE8E8C1F77B1530056F1A1 /* GitHubAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAuthController.swift; sourceTree = "<group>"; };
 		BEEE8E901F77B1890056F1A1 /* Actions_Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions_Todo.swift; sourceTree = "<group>"; };
 		BEEE8E931F77B23D0056F1A1 /* FirebaseAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAPIController.swift; sourceTree = "<group>"; };
 		BEEE8E961F77B4280056F1A1 /* State_Todos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State_Todos.swift; sourceTree = "<group>"; };
@@ -92,6 +105,9 @@
 		BEEE8EA01F77C0780056F1A1 /* TodosVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosVM.swift; sourceTree = "<group>"; };
 		BEEE8EA31F77C1520056F1A1 /* Todo_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo_TableViewCell.swift; sourceTree = "<group>"; };
 		BEEE8EA51F77C2130056F1A1 /* TodoVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoVM.swift; sourceTree = "<group>"; };
+		BEEE8EA71F77C84E0056F1A1 /* Auth_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth_Tests.swift; sourceTree = "<group>"; };
+		BEEE8EA91F77C8D40056F1A1 /* GoogleService-Info-Test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Test.plist"; sourceTree = "<group>"; };
+		BEEE8EAC1F77CD4C0056F1A1 /* OAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth.swift; sourceTree = "<group>"; };
 		BEFA26D11F76FE650043FF3C /* GitHubStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,10 +162,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BE0A0EA41F77F1D9006F9EA4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE0A0EA51F77F1EC006F9EA4 /* HTTPController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BE1A5EF51F798699007BA647 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BE1A5EF61F7986AE007BA647 /* HTTPClient_Test.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BE1A5EF81F7987AC007BA647 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BE1A5EF91F7987C1007BA647 /* URLSessionProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		BE2733EB1F744C17004A7D66 = {
 			isa = PBXGroup;
 			children = (
 				BE2734271F744DB0004A7D66 /* GoogleService-Info.plist */,
+				BEEE8EA91F77C8D40056F1A1 /* GoogleService-Info-Test.plist */,
 				BE2733F61F744C17004A7D66 /* MBTodo */,
 				BE27340B1F744C17004A7D66 /* MBTodoTests */,
 				BE2734161F744C17004A7D66 /* MBTodoUITests */,
@@ -172,19 +213,19 @@
 		BE2733F61F744C17004A7D66 /* MBTodo */ = {
 			isa = PBXGroup;
 			children = (
-				BEEE8E9B1F77B7D30056F1A1 /* Utils */,
-				BEEE8E8E1F77B1680056F1A1 /* Todos */,
-				BE27344B1F74664E004A7D66 /* Reducer.swift */,
-				BE2734461F745A3D004A7D66 /* State.swift */,
-				BE27343A1F74562B004A7D66 /* Launch */,
 				BE2734331F745524004A7D66 /* Auth */,
 				BE2734251F744C7E004A7D66 /* Data */,
+				BE27343A1F74562B004A7D66 /* Launch */,
+				BEEE8E8E1F77B1680056F1A1 /* Todos */,
+				BEEE8E9B1F77B7D30056F1A1 /* Utils */,
 				BE2733F71F744C17004A7D66 /* AppDelegate.swift */,
-				BE2733F91F744C17004A7D66 /* ViewController.swift */,
-				BE2733FB1F744C17004A7D66 /* Main.storyboard */,
 				BE2733FE1F744C17004A7D66 /* Assets.xcassets */,
-				BE2734001F744C17004A7D66 /* LaunchScreen.storyboard */,
 				BE2734031F744C17004A7D66 /* Info.plist */,
+				BE2734001F744C17004A7D66 /* LaunchScreen.storyboard */,
+				BE2733FB1F744C17004A7D66 /* Main.storyboard */,
+				BE27344B1F74664E004A7D66 /* Reducer.swift */,
+				BE2734461F745A3D004A7D66 /* State.swift */,
+				BE2733F91F744C17004A7D66 /* ViewController.swift */,
 			);
 			path = MBTodo;
 			sourceTree = "<group>";
@@ -192,8 +233,10 @@
 		BE27340B1F744C17004A7D66 /* MBTodoTests */ = {
 			isa = PBXGroup;
 			children = (
+				BE1A5EF51F798699007BA647 /* Utils */,
 				BE27340C1F744C17004A7D66 /* MBTodoTests.swift */,
 				BE27340E1F744C17004A7D66 /* Info.plist */,
+				BEEE8EA71F77C84E0056F1A1 /* Auth_Tests.swift */,
 			);
 			path = MBTodoTests;
 			sourceTree = "<group>";
@@ -227,10 +270,11 @@
 		BE2734331F745524004A7D66 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				BEEE8E8B1F77B1430056F1A1 /* Controllers */,
-				BEFA26D01F76FE480043FF3C /* Constants */,
-				BE2734481F745A42004A7D66 /* State */,
 				BE27343E1F7457C5004A7D66 /* Actions */,
+				BEFA26D01F76FE480043FF3C /* Constants */,
+				BEEE8E8B1F77B1430056F1A1 /* Controllers */,
+				BEEE8EAB1F77CD330056F1A1 /* Protocols */,
+				BE2734481F745A42004A7D66 /* State */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -238,17 +282,8 @@
 		BE27343A1F74562B004A7D66 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
-				BE27343B1F745637004A7D66 /* Actions */,
 			);
 			path = Launch;
-			sourceTree = "<group>";
-		};
-		BE27343B1F745637004A7D66 /* Actions */ = {
-			isa = PBXGroup;
-			children = (
-				BE27343C1F745662004A7D66 /* Actions_Launch.swift */,
-			);
-			path = Actions;
 			sourceTree = "<group>";
 		};
 		BE27343E1F7457C5004A7D66 /* Actions */ = {
@@ -270,7 +305,8 @@
 		BEEE8E8B1F77B1430056F1A1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BEEE8E8C1F77B1530056F1A1 /* GitHubAPIController.swift */,
+				BEEE8E8C1F77B1530056F1A1 /* GitHubAuthController.swift */,
+				BE4368A71F77D6060052D379 /* FirebaseAuthController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -278,12 +314,12 @@
 		BEEE8E8E1F77B1680056F1A1 /* Todos */ = {
 			isa = PBXGroup;
 			children = (
-				BEEE8EA21F77C12C0056F1A1 /* Views */,
-				BEEE8E9F1F77C0610056F1A1 /* ViewModels */,
+				BEEE8E8F1F77B1740056F1A1 /* Actions */,
+				BEEE8E921F77B2280056F1A1 /* Controllers */,
 				BEEE8E981F77B4630056F1A1 /* Model */,
 				BEEE8E951F77B4160056F1A1 /* State */,
-				BEEE8E921F77B2280056F1A1 /* Controllers */,
-				BEEE8E8F1F77B1740056F1A1 /* Actions */,
+				BEEE8E9F1F77C0610056F1A1 /* ViewModels */,
+				BEEE8EA21F77C12C0056F1A1 /* Views */,
 			);
 			path = Todos;
 			sourceTree = "<group>";
@@ -323,6 +359,8 @@
 		BEEE8E9B1F77B7D30056F1A1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BE1A5EF81F7987AC007BA647 /* Protocols */,
+				BE0A0EA41F77F1D9006F9EA4 /* Controllers */,
 				BEEE8E9C1F77B7E20056F1A1 /* Extensions */,
 			);
 			path = Utils;
@@ -332,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				BEEE8E9D1F77B7FB0056F1A1 /* Dictionary+OptionalSubscript.swift */,
+				BE1A5EFB1F798DE7007BA647 /* URLSession.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -351,6 +390,15 @@
 				BEEE8EA31F77C1520056F1A1 /* Todo_TableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BEEE8EAB1F77CD330056F1A1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BEEE8EAC1F77CD4C0056F1A1 /* OAuth.swift */,
+				BE4368AC1F77E26C0052D379 /* Networkable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		BEFA26D01F76FE480043FF3C /* Constants */ = {
@@ -438,6 +486,7 @@
 				TargetAttributes = {
 					BE2733F31F744C17004A7D66 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = U5FH5JR68H;
 						ProvisioningStyle = Automatic;
 					};
 					BE2734071F744C17004A7D66 = {
@@ -488,6 +537,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEEE8EAA1F77C8D40056F1A1 /* GoogleService-Info-Test.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,19 +697,24 @@
 				BE2734401F7457D4004A7D66 /* Actions_Auth.swift in Sources */,
 				BE27344C1F74664E004A7D66 /* Reducer.swift in Sources */,
 				BEEE8E911F77B1890056F1A1 /* Actions_Todo.swift in Sources */,
+				BE4368A81F77D6060052D379 /* FirebaseAuthController.swift in Sources */,
 				BEEE8EA11F77C0780056F1A1 /* TodosVM.swift in Sources */,
-				BEEE8E8D1F77B1530056F1A1 /* GitHubAPIController.swift in Sources */,
+				BEEE8E8D1F77B1530056F1A1 /* GitHubAuthController.swift in Sources */,
 				BEEE8E941F77B23D0056F1A1 /* FirebaseAPIController.swift in Sources */,
 				BE2733F81F744C17004A7D66 /* AppDelegate.swift in Sources */,
+				BE1A5EFC1F798DE7007BA647 /* URLSession.swift in Sources */,
 				BEEE8E9A1F77B46F0056F1A1 /* Todo.swift in Sources */,
+				BEEE8EAD1F77CD4C0056F1A1 /* OAuth.swift in Sources */,
 				BEEE8EA41F77C1520056F1A1 /* Todo_TableViewCell.swift in Sources */,
 				BEEE8EA61F77C2130056F1A1 /* TodoVM.swift in Sources */,
-				BE27343D1F745662004A7D66 /* Actions_Launch.swift in Sources */,
 				BEFA26D21F76FE650043FF3C /* GitHubStrings.swift in Sources */,
 				BE27342A1F744E76004A7D66 /* FirebaseWrapper.swift in Sources */,
 				BE27344A1F745A98004A7D66 /* State_Auth.swift in Sources */,
+				BE1A5EFA1F7987C1007BA647 /* URLSessionProtocol.swift in Sources */,
 				BEEE8E971F77B4280056F1A1 /* State_Todos.swift in Sources */,
+				BE0A0EA61F77F1EC006F9EA4 /* HTTPController.swift in Sources */,
 				BE2734471F745A3D004A7D66 /* State.swift in Sources */,
+				BE4368AD1F77E26C0052D379 /* Networkable.swift in Sources */,
 				BEEE8E9E1F77B7FB0056F1A1 /* Dictionary+OptionalSubscript.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -668,7 +723,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEEE8EA81F77C84E0056F1A1 /* Auth_Tests.swift in Sources */,
 				BE27340D1F744C17004A7D66 /* MBTodoTests.swift in Sources */,
+				BE1A5EF71F7986AE007BA647 /* HTTPClient_Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,7 +870,9 @@
 			baseConfigurationReference = 674131A9E625A3AACD6FDCD8 /* Pods-MBTodo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U5FH5JR68H;
 				INFOPLIST_FILE = MBTodo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mb.MBTodo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -826,7 +885,9 @@
 			baseConfigurationReference = 9C0659D2CDE646732FC0090F /* Pods-MBTodo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U5FH5JR68H;
 				INFOPLIST_FILE = MBTodo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mb.MBTodo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
