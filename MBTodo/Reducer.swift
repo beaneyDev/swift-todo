@@ -23,6 +23,11 @@ func authReducer(action: Action, state: State_Auth?) -> State_Auth {
             newState.uid = action.uid
             return newState
         }
+    case let action as ShowAuthError:
+        if var newState = state {
+            newState.uid = nil
+            return newState
+        }
     default:
         break
     }

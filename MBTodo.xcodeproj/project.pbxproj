@@ -41,6 +41,8 @@
 		BEEE8EA81F77C84E0056F1A1 /* Auth_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8EA71F77C84E0056F1A1 /* Auth_Tests.swift */; };
 		BEEE8EAA1F77C8D40056F1A1 /* GoogleService-Info-Test.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEEE8EA91F77C8D40056F1A1 /* GoogleService-Info-Test.plist */; };
 		BEEE8EAD1F77CD4C0056F1A1 /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8EAC1F77CD4C0056F1A1 /* OAuth.swift */; };
+		BEF17B701F7C309D007B825A /* CustomErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF17B6F1F7C309D007B825A /* CustomErrors.swift */; };
+		BEF17B731F7C3C94007B825A /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF17B721F7C3C94007B825A /* MockURLSession.swift */; };
 		BEFA26D21F76FE650043FF3C /* GitHubStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFA26D11F76FE650043FF3C /* GitHubStrings.swift */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +110,8 @@
 		BEEE8EA71F77C84E0056F1A1 /* Auth_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth_Tests.swift; sourceTree = "<group>"; };
 		BEEE8EA91F77C8D40056F1A1 /* GoogleService-Info-Test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Test.plist"; sourceTree = "<group>"; };
 		BEEE8EAC1F77CD4C0056F1A1 /* OAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth.swift; sourceTree = "<group>"; };
+		BEF17B6F1F7C309D007B825A /* CustomErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrors.swift; sourceTree = "<group>"; };
+		BEF17B721F7C3C94007B825A /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		BEFA26D11F76FE650043FF3C /* GitHubStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +177,7 @@
 		BE1A5EF51F798699007BA647 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BEF17B711F7C3C7E007B825A /* Controllers */,
 				BE1A5EF61F7986AE007BA647 /* HTTPClient_Test.swift */,
 			);
 			path = Utils;
@@ -359,6 +364,7 @@
 		BEEE8E9B1F77B7D30056F1A1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BEF17B6E1F7C306F007B825A /* Model */,
 				BE1A5EF81F7987AC007BA647 /* Protocols */,
 				BE0A0EA41F77F1D9006F9EA4 /* Controllers */,
 				BEEE8E9C1F77B7E20056F1A1 /* Extensions */,
@@ -399,6 +405,22 @@
 				BE4368AC1F77E26C0052D379 /* Networkable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BEF17B6E1F7C306F007B825A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BEF17B6F1F7C309D007B825A /* CustomErrors.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BEF17B711F7C3C7E007B825A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BEF17B721F7C3C94007B825A /* MockURLSession.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		BEFA26D01F76FE480043FF3C /* Constants */ = {
@@ -710,6 +732,7 @@
 				BEFA26D21F76FE650043FF3C /* GitHubStrings.swift in Sources */,
 				BE27342A1F744E76004A7D66 /* FirebaseWrapper.swift in Sources */,
 				BE27344A1F745A98004A7D66 /* State_Auth.swift in Sources */,
+				BEF17B701F7C309D007B825A /* CustomErrors.swift in Sources */,
 				BE1A5EFA1F7987C1007BA647 /* URLSessionProtocol.swift in Sources */,
 				BEEE8E971F77B4280056F1A1 /* State_Todos.swift in Sources */,
 				BE0A0EA61F77F1EC006F9EA4 /* HTTPController.swift in Sources */,
@@ -723,6 +746,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEF17B731F7C3C94007B825A /* MockURLSession.swift in Sources */,
 				BEEE8EA81F77C84E0056F1A1 /* Auth_Tests.swift in Sources */,
 				BE27340D1F744C17004A7D66 /* MBTodoTests.swift in Sources */,
 				BE1A5EF71F7986AE007BA647 /* HTTPClient_Test.swift in Sources */,

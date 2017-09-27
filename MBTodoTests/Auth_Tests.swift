@@ -40,16 +40,20 @@ class MockFirebaseAuthController : OAuthTokenValidator {
 class Auth_Tests: QuickSpec {
     override func spec() {
         describe("Tests For authentication") {
-            let store = Store<State>(reducer: appReducer, state: nil)
+            var store = Store<State>(reducer: appReducer, state: nil)
 
+            beforeEach {
+                store = Store<State>(reducer: appReducer, state: nil)
+            }
+            
             it("Fetches the token from a URL, and dispatches an action to update the user.", closure: {
                 store.dispatch(Actions_Auth.fetchToken(url: URL(string: "http://yay.com")!, fetcher: MockGitHubAuthController(), validator: MockFirebaseAuthController()))
-                expect(store.state.authState.uid).toEventually(equal("yay"))
+                expect(store.state.authState.uid).to(equal("yay"))
             })
             
             it("Fails to fetch a token from a URL, and does not update the store.") {
                 store.dispatch(Actions_Auth.fetchToken(url: URL(string: "http://fail.com")!, fetcher: MockGitHubAuthController(), validator: MockFirebaseAuthController()))
-                expect(store.state.authState.uid).toEventually(beNil())
+                expect(store.state.authState.uid).to(beNil())
             }
             
             

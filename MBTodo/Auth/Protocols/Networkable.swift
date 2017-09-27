@@ -11,7 +11,11 @@ import Foundation
 typealias NetworkCompletion = (HTTPResponse) -> ()
 
 protocol Networkable {
-    func request(session: URLSessionProtocol, url: URL, completion: @escaping NetworkCompletion) -> URLSessionDataTaskProtocol?
-    func request(url: URL, completion: @escaping NetworkCompletion) -> URLSessionDataTaskProtocol?
-    func request(url: String, completion: @escaping NetworkCompletion) -> URLSessionDataTaskProtocol?
+    func get(session: URLSessionProtocol, url: URL, completion: @escaping NetworkCompletion) -> URLSessionDataTaskProtocol?
+    func get(url: URL, completion: @escaping NetworkCompletion) -> URLSessionDataTaskProtocol?
+    func get(url: String, completion: @escaping NetworkCompletion) -> URLSessionDataTaskProtocol?
+    
+    func post(url: String, headers: [String: String], body: [String : String], completion: @escaping (HTTPResponse) -> ()) -> URLSessionDataTaskProtocol?
+    func post(url: URL, headers: [String: String], body: [String : String], completion: @escaping (HTTPResponse) -> ()) -> URLSessionDataTaskProtocol?
+    func post(session: URLSessionProtocol, url: URL, headers: [String: String], body: [String : String], completion: @escaping (HTTPResponse) -> ()) -> URLSessionDataTaskProtocol?
 }
