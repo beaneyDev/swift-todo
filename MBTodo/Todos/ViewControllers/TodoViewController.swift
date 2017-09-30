@@ -30,7 +30,7 @@ class TodoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.todosVM = TodosVM(tableView: self.tableView)
+        self.todosVM = TodosVM(tableView: self.tableView, fetcher: FirebaseTodoController())
     }
     
     @IBAction func filter(_ sender: Any) {
@@ -49,7 +49,6 @@ class TodoViewController: UIViewController {
         }
         
         store.dispatch(Actions_Todo.addTodo(todoText: todoText))
-        
         self.txtFieldAdd.text = ""
     }
     

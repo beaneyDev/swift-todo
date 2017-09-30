@@ -25,6 +25,10 @@ class AuthVM : NSObject {
         store.dispatch(Actions_Auth.refreshLogin(state:store:))
         store.subscribe(self)
     }
+    
+    func login() {
+        store.dispatch(Actions_Auth.initiateSSOLogin())
+    }
 }
 
 extension AuthVM : StoreSubscriber {
@@ -47,6 +51,10 @@ extension AuthVM : StoreSubscriber {
             
             self.authState = state.authState
         }
+    }
+    
+    func unsubscribe() {
+        store.unsubscribe(self)
     }
     
     /**

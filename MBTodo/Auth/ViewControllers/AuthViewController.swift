@@ -9,24 +9,39 @@
 import Foundation
 import UIKit
 
-class AuthViewController : UIViewController, AuthListener {
+class AuthViewController : UIViewController, AuthListener, ActivityPresentable {
+    var authVM : AuthVM?
+    var activityBlocker: UIView?
+    
+    override func viewDidLoad() {
+        self.authVM = AuthVM(listener: self)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.authVM?.unsubscribe()
+    }
+    
+    @IBAction func login(_ sender: Any) {
+        self.presentActivityView(with: "Logging In...")
+        self.authVM?.login()
+    }
+    
     func userAuthorised(uid: String) {
-        
+        on.main {
+            self.performSegue(withIdentifier: "home", sender: nil)
+        }
     }
     
     func userLoginErrored(error: Error) {
-        
+        on.main {
+            let alert = UIAlertController(title: "There was a problem logging in", message: "Sorry, there was an issue logging in, please try again.", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func userNotLoggedIn() {
         
     }
 }
-
-//self.databaseReference = FirebaseTodoController().observeTodos(uid: uid, completion: { (todos, error) in
-//    guard let todos = todos else { return }
-//    store.dispatch(SetTodos(todos: todos))
-//})
-
-//store.dispatch(Actions_Auth.initiateSSOLogin())
 

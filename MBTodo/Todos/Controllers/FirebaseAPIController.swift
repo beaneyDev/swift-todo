@@ -9,8 +9,10 @@
 import Foundation
 import Firebase
 
-class FirebaseTodoController {    
-    func observeTodos(uid: String, completion: @escaping (_ todos: [Todo]?, _ error: Error?) -> ()) -> DatabaseReference {
+extension DatabaseReference : TodoDataSource {}
+
+class FirebaseTodoController : TodoFetcher {
+    func observeTodos(uid: String, completion: @escaping (_ todos: [Todo]?, _ error: Error?) -> ()) -> TodoDataSource {
         let ref = Database.database().reference()
         
         ref.child("users").child(uid).child("todos").observe(.value, with: { (snapshot) in

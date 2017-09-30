@@ -48,15 +48,20 @@ class Auth_Tests: QuickSpec {
             
             it("Fetches the token from a URL, and dispatches an action to update the user.", closure: {
                 store.dispatch(Actions_Auth.fetchToken(url: URL(string: "http://yay.com")!, fetcher: MockGitHubAuthController(), validator: MockFirebaseAuthController()))
-                expect(store.state.authState.uid).to(equal("yay"))
+                
+                guard case let LoginStatus.loggedIn(uid: uid) = store.state.authState.loginStatus else {
+                    expect(false).to(equal(true))
+                    return
+                }
+                
+                expect(uid).to(equal("yay"))
             })
             
             it("Fails to fetch a token from a URL, and does not update the store.") {
                 store.dispatch(Actions_Auth.fetchToken(url: URL(string: "http://fail.com")!, fetcher: MockGitHubAuthController(), validator: MockFirebaseAuthController()))
-                expect(store.state.authState.uid).to(beNil())
+                
+                expect(store.state.authState).to(equal(State_Auth(loginStatus: .notLoggedIn)))
             }
-            
-            
         }
     }
 }

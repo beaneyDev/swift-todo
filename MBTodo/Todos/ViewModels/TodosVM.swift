@@ -18,11 +18,11 @@ class TodosVM: NSObject {
     
     var todos: [Todo] = [Todo]()
     
-    var databaseReference: DatabaseReference?
+    var databaseReference: TodoDataSource?
     
     weak var tableView: UITableView?
     
-    init(tableView: UITableView) {
+    init(tableView: UITableView, fetcher: TodoFetcher) {
         super.init()
         store.subscribe(self)
         tableView.delegate      = self
@@ -33,7 +33,7 @@ class TodosVM: NSObject {
             return
         }
         
-        self.databaseReference = FirebaseTodoController().observeTodos(uid: uid) { (todos, error) in
+        self.databaseReference = fetcher.observeTodos(uid: uid) { (todos, error) in
             guard let todos = todos else {
                 return
             }

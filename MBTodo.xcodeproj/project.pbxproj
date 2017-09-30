@@ -29,11 +29,21 @@
 		BE27344C1F74664E004A7D66 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE27344B1F74664E004A7D66 /* Reducer.swift */; };
 		BE4368A81F77D6060052D379 /* FirebaseAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4368A71F77D6060052D379 /* FirebaseAuthController.swift */; };
 		BE4368AD1F77E26C0052D379 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4368AC1F77E26C0052D379 /* Networkable.swift */; };
+		BE5F7A331F800B960036653F /* Dictionary+OptionalSubscript_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F7A321F800B960036653F /* Dictionary+OptionalSubscript_Test.swift */; };
+		BE5F7A351F800E0B0036653F /* Date+Comparators_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F7A341F800E0B0036653F /* Date+Comparators_Test.swift */; };
+		BE5F7A391F800F260036653F /* TodoVM_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F7A381F800F260036653F /* TodoVM_Test.swift */; };
+		BE5F7A3B1F8015C20036653F /* TodosVM_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F7A3A1F8015C20036653F /* TodosVM_Test.swift */; };
+		BE5F7A3E1F8016A30036653F /* TodoFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F7A3D1F8016A30036653F /* TodoFetcher.swift */; };
+		BE5F7A401F8016F90036653F /* TodoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F7A3F1F8016F90036653F /* TodoDataSource.swift */; };
+		BE5F7A441F8018AF0036653F /* TodoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F7A431F8018AF0036653F /* TodoGenerator.swift */; };
+		BE5F7A471F8032E30036653F /* MBTickBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F7A461F8032E30036653F /* MBTickBox.swift */; };
 		BE684E641F7D97CE00F9A1EC /* Date+Comparators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE684E631F7D97CE00F9A1EC /* Date+Comparators.swift */; };
 		BEC22C711F7FD59A0021DBAF /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC22C701F7FD59A0021DBAF /* LaunchViewController.swift */; };
 		BEC22C741F7FD61A0021DBAF /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC22C731F7FD61A0021DBAF /* AuthViewController.swift */; };
 		BEC22C771F7FD6890021DBAF /* AuthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC22C761F7FD6890021DBAF /* AuthVM.swift */; };
 		BEC22C791F7FE24F0021DBAF /* TodoDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC22C781F7FE24F0021DBAF /* TodoDateFormatter.swift */; };
+		BEC597C01F803AA300F731C1 /* on.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC597BF1F803AA300F731C1 /* on.swift */; };
+		BEC597C21F80406600F731C1 /* ActivityPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC597C11F80406600F731C1 /* ActivityPresentable.swift */; };
 		BEEE8E8D1F77B1530056F1A1 /* GitHubAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8E8C1F77B1530056F1A1 /* GitHubAuthController.swift */; };
 		BEEE8E911F77B1890056F1A1 /* Actions_Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8E901F77B1890056F1A1 /* Actions_Todo.swift */; };
 		BEEE8E941F77B23D0056F1A1 /* FirebaseAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8E931F77B23D0056F1A1 /* FirebaseAPIController.swift */; };
@@ -103,11 +113,21 @@
 		BE27344B1F74664E004A7D66 /* Reducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
 		BE4368A71F77D6060052D379 /* FirebaseAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuthController.swift; sourceTree = "<group>"; };
 		BE4368AC1F77E26C0052D379 /* Networkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
+		BE5F7A321F800B960036653F /* Dictionary+OptionalSubscript_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+OptionalSubscript_Test.swift"; sourceTree = "<group>"; };
+		BE5F7A341F800E0B0036653F /* Date+Comparators_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Comparators_Test.swift"; sourceTree = "<group>"; };
+		BE5F7A381F800F260036653F /* TodoVM_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoVM_Test.swift; sourceTree = "<group>"; };
+		BE5F7A3A1F8015C20036653F /* TodosVM_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosVM_Test.swift; sourceTree = "<group>"; };
+		BE5F7A3D1F8016A30036653F /* TodoFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoFetcher.swift; sourceTree = "<group>"; };
+		BE5F7A3F1F8016F90036653F /* TodoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDataSource.swift; sourceTree = "<group>"; };
+		BE5F7A431F8018AF0036653F /* TodoGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoGenerator.swift; sourceTree = "<group>"; };
+		BE5F7A461F8032E30036653F /* MBTickBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTickBox.swift; sourceTree = "<group>"; };
 		BE684E631F7D97CE00F9A1EC /* Date+Comparators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Comparators.swift"; sourceTree = "<group>"; };
 		BEC22C701F7FD59A0021DBAF /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		BEC22C731F7FD61A0021DBAF /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		BEC22C761F7FD6890021DBAF /* AuthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVM.swift; sourceTree = "<group>"; };
 		BEC22C781F7FE24F0021DBAF /* TodoDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDateFormatter.swift; sourceTree = "<group>"; };
+		BEC597BF1F803AA300F731C1 /* on.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = on.swift; sourceTree = "<group>"; };
+		BEC597C11F80406600F731C1 /* ActivityPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPresentable.swift; sourceTree = "<group>"; };
 		BEEE8E8C1F77B1530056F1A1 /* GitHubAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAuthController.swift; sourceTree = "<group>"; };
 		BEEE8E901F77B1890056F1A1 /* Actions_Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions_Todo.swift; sourceTree = "<group>"; };
 		BEEE8E931F77B23D0056F1A1 /* FirebaseAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAPIController.swift; sourceTree = "<group>"; };
@@ -180,7 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				BE0A0EA51F77F1EC006F9EA4 /* HTTPController.swift */,
-				BEC22C781F7FE24F0021DBAF /* TodoDateFormatter.swift */,
+				BEC597BF1F803AA300F731C1 /* on.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -188,6 +208,7 @@
 		BE1A5EF51F798699007BA647 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BE5F7A311F800B710036653F /* Extensions */,
 				BEF17B711F7C3C7E007B825A /* Controllers */,
 				BE1A5EF61F7986AE007BA647 /* HTTPClient_Test.swift */,
 			);
@@ -198,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				BE1A5EF91F7987C1007BA647 /* URLSessionProtocol.swift */,
+				BEC597C11F80406600F731C1 /* ActivityPresentable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -248,6 +270,7 @@
 		BE27340B1F744C17004A7D66 /* MBTodoTests */ = {
 			isa = PBXGroup;
 			children = (
+				BE5F7A361F800F140036653F /* Todos */,
 				BE1A5EF51F798699007BA647 /* Utils */,
 				BE27340C1F744C17004A7D66 /* MBTodoTests.swift */,
 				BE27340E1F744C17004A7D66 /* Info.plist */,
@@ -285,13 +308,13 @@
 		BE2734331F745524004A7D66 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				BEC22C751F7FD6800021DBAF /* ViewModels */,
-				BEC22C721F7FD6090021DBAF /* ViewControllers */,
 				BE27343E1F7457C5004A7D66 /* Actions */,
 				BEFA26D01F76FE480043FF3C /* Constants */,
 				BEEE8E8B1F77B1430056F1A1 /* Controllers */,
 				BEEE8EAB1F77CD330056F1A1 /* Protocols */,
 				BE2734481F745A42004A7D66 /* State */,
+				BEC22C721F7FD6090021DBAF /* ViewControllers */,
+				BEC22C751F7FD6800021DBAF /* ViewModels */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -299,6 +322,7 @@
 		BE27343A1F74562B004A7D66 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
+				BE5F7A451F8032D80036653F /* Views */,
 				BEC22C6F1F7FD5690021DBAF /* ViewControllers */,
 			);
 			path = Launch;
@@ -318,6 +342,58 @@
 				BE2734491F745A98004A7D66 /* State_Auth.swift */,
 			);
 			path = State;
+			sourceTree = "<group>";
+		};
+		BE5F7A311F800B710036653F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BE5F7A321F800B960036653F /* Dictionary+OptionalSubscript_Test.swift */,
+				BE5F7A341F800E0B0036653F /* Date+Comparators_Test.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BE5F7A361F800F140036653F /* Todos */ = {
+			isa = PBXGroup;
+			children = (
+				BE5F7A421F8018940036653F /* Test_Helpers */,
+				BE5F7A371F800F1B0036653F /* ViewModels */,
+			);
+			path = Todos;
+			sourceTree = "<group>";
+		};
+		BE5F7A371F800F1B0036653F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BE5F7A381F800F260036653F /* TodoVM_Test.swift */,
+				BE5F7A3A1F8015C20036653F /* TodosVM_Test.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BE5F7A3C1F8016910036653F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BE5F7A3D1F8016A30036653F /* TodoFetcher.swift */,
+				BE5F7A3F1F8016F90036653F /* TodoDataSource.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BE5F7A421F8018940036653F /* Test_Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BE5F7A431F8018AF0036653F /* TodoGenerator.swift */,
+			);
+			path = Test_Helpers;
+			sourceTree = "<group>";
+		};
+		BE5F7A451F8032D80036653F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE5F7A461F8032E30036653F /* MBTickBox.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		BEC22C6F1F7FD5690021DBAF /* ViewControllers */ = {
@@ -367,6 +443,7 @@
 				BEEE8E8F1F77B1740056F1A1 /* Actions */,
 				BEEE8E921F77B2280056F1A1 /* Controllers */,
 				BEEE8E981F77B4630056F1A1 /* Model */,
+				BE5F7A3C1F8016910036653F /* Protocols */,
 				BEEE8E951F77B4160056F1A1 /* State */,
 				BEC22C7A1F7FEBB30021DBAF /* ViewControllers */,
 				BEEE8E9F1F77C0610056F1A1 /* ViewModels */,
@@ -387,6 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				BEEE8E931F77B23D0056F1A1 /* FirebaseAPIController.swift */,
+				BEC22C781F7FE24F0021DBAF /* TodoDateFormatter.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -771,19 +849,24 @@
 				BEEE8E8D1F77B1530056F1A1 /* GitHubAuthController.swift in Sources */,
 				BEC22C741F7FD61A0021DBAF /* AuthViewController.swift in Sources */,
 				BEEE8E941F77B23D0056F1A1 /* FirebaseAPIController.swift in Sources */,
+				BE5F7A3E1F8016A30036653F /* TodoFetcher.swift in Sources */,
+				BEC597C01F803AA300F731C1 /* on.swift in Sources */,
 				BE2733F81F744C17004A7D66 /* AppDelegate.swift in Sources */,
 				BE1A5EFC1F798DE7007BA647 /* URLSession.swift in Sources */,
 				BEEE8E9A1F77B46F0056F1A1 /* Todo.swift in Sources */,
+				BE5F7A471F8032E30036653F /* MBTickBox.swift in Sources */,
 				BEC22C771F7FD6890021DBAF /* AuthVM.swift in Sources */,
 				BEEE8EAD1F77CD4C0056F1A1 /* OAuth.swift in Sources */,
 				BEEE8EA41F77C1520056F1A1 /* Todo_TableViewCell.swift in Sources */,
 				BEC22C711F7FD59A0021DBAF /* LaunchViewController.swift in Sources */,
 				BEEE8EA61F77C2130056F1A1 /* TodoVM.swift in Sources */,
 				BEC22C791F7FE24F0021DBAF /* TodoDateFormatter.swift in Sources */,
+				BE5F7A401F8016F90036653F /* TodoDataSource.swift in Sources */,
 				BEFA26D21F76FE650043FF3C /* GitHubStrings.swift in Sources */,
 				BE27342A1F744E76004A7D66 /* FirebaseWrapper.swift in Sources */,
 				BE27344A1F745A98004A7D66 /* State_Auth.swift in Sources */,
 				BE684E641F7D97CE00F9A1EC /* Date+Comparators.swift in Sources */,
+				BEC597C21F80406600F731C1 /* ActivityPresentable.swift in Sources */,
 				BEF17B701F7C309D007B825A /* CustomErrors.swift in Sources */,
 				BE1A5EFA1F7987C1007BA647 /* URLSessionProtocol.swift in Sources */,
 				BEEE8E971F77B4280056F1A1 /* State_Todos.swift in Sources */,
@@ -798,10 +881,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE5F7A3B1F8015C20036653F /* TodosVM_Test.swift in Sources */,
 				BEF17B731F7C3C94007B825A /* MockURLSession.swift in Sources */,
 				BEEE8EA81F77C84E0056F1A1 /* Auth_Tests.swift in Sources */,
 				BE27340D1F744C17004A7D66 /* MBTodoTests.swift in Sources */,
+				BE5F7A441F8018AF0036653F /* TodoGenerator.swift in Sources */,
+				BE5F7A391F800F260036653F /* TodoVM_Test.swift in Sources */,
 				BE1A5EF71F7986AE007BA647 /* HTTPClient_Test.swift in Sources */,
+				BE5F7A331F800B960036653F /* Dictionary+OptionalSubscript_Test.swift in Sources */,
+				BE5F7A351F800E0B0036653F /* Date+Comparators_Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

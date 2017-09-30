@@ -15,6 +15,14 @@ struct Todo {
     var completedAt: Date?
     var completed: Bool?
     
+    init(key: String, text: String, createdAt: Date, completedAt: Date?, completed: Bool) {
+        self.key = key
+        self.text = text
+        self.createdAt = createdAt
+        self.completedAt = completedAt
+        self.completed = completed
+    }
+    
     init(key: String, todos: Dictionary<String, Any>) {
         self.key = key
         self.text           = todos.obj(for: "text")

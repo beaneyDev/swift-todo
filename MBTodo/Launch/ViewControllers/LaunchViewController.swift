@@ -13,19 +13,38 @@ import ReSwift
 class LaunchViewController : UIViewController, AuthListener {
     
     var authVM: AuthVM?
+    @IBOutlet weak var tick: UIView!
     
-    override func viewDidAppear(_ animated: Bool) {
-        self.authVM = AuthVM(listener: self)
+    override func viewDidLoad() {
+        self.configureTicker()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        authVM?.unsubscribe()
+    }
+    
+    func configureTicker() {
+        let ticker = MBTickBox()
+        ticker.configure()
+        ticker.translatesAutoresizingMaskIntoConstraints = false
+        self.tick.addSubview(ticker)
+        self.tick.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[tick]|", options: [], metrics: nil, views: ["tick": ticker]))
+        self.tick.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[tick]|", options: [], metrics: nil, views: ["tick": ticker]))
+        on.delay(0.1) {
+            ticker.tick {
+                self.authVM = AuthVM(listener: self)
+            }
+        }
     }
     
     func userAuthorised(uid: String) {
-        DispatchQueue.main.async {
+        on.main_delay(0.5) {
             self.performSegue(withIdentifier: "home", sender: nil)
         }
     }
     
     func moveToLogin() {
-        DispatchQueue.main.async {
+        on.main_delay(0.5) {
             self.performSegue(withIdentifier: "login", sender: nil)
         }
     }
