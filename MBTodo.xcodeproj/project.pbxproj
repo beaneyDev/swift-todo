@@ -44,6 +44,7 @@
 		BEC22C791F7FE24F0021DBAF /* TodoDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC22C781F7FE24F0021DBAF /* TodoDateFormatter.swift */; };
 		BEC597C01F803AA300F731C1 /* on.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC597BF1F803AA300F731C1 /* on.swift */; };
 		BEC597C21F80406600F731C1 /* ActivityPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC597C11F80406600F731C1 /* ActivityPresentable.swift */; };
+		BEC597C51F80479C00F731C1 /* ActivityPresentable_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC597C41F80479C00F731C1 /* ActivityPresentable_Test.swift */; };
 		BEEE8E8D1F77B1530056F1A1 /* GitHubAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8E8C1F77B1530056F1A1 /* GitHubAuthController.swift */; };
 		BEEE8E911F77B1890056F1A1 /* Actions_Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8E901F77B1890056F1A1 /* Actions_Todo.swift */; };
 		BEEE8E941F77B23D0056F1A1 /* FirebaseAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8E931F77B23D0056F1A1 /* FirebaseAPIController.swift */; };
@@ -128,6 +129,7 @@
 		BEC22C781F7FE24F0021DBAF /* TodoDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDateFormatter.swift; sourceTree = "<group>"; };
 		BEC597BF1F803AA300F731C1 /* on.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = on.swift; sourceTree = "<group>"; };
 		BEC597C11F80406600F731C1 /* ActivityPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPresentable.swift; sourceTree = "<group>"; };
+		BEC597C41F80479C00F731C1 /* ActivityPresentable_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPresentable_Test.swift; sourceTree = "<group>"; };
 		BEEE8E8C1F77B1530056F1A1 /* GitHubAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAuthController.swift; sourceTree = "<group>"; };
 		BEEE8E901F77B1890056F1A1 /* Actions_Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions_Todo.swift; sourceTree = "<group>"; };
 		BEEE8E931F77B23D0056F1A1 /* FirebaseAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAPIController.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 		BE1A5EF51F798699007BA647 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BEC597C31F80478000F731C1 /* Protocols */,
 				BE5F7A311F800B710036653F /* Extensions */,
 				BEF17B711F7C3C7E007B825A /* Controllers */,
 				BE1A5EF61F7986AE007BA647 /* HTTPClient_Test.swift */,
@@ -426,6 +429,14 @@
 				BE2733F91F744C17004A7D66 /* TodoViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BEC597C31F80478000F731C1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BEC597C41F80479C00F731C1 /* ActivityPresentable_Test.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		BEEE8E8B1F77B1430056F1A1 /* Controllers */ = {
@@ -889,6 +900,7 @@
 				BE5F7A391F800F260036653F /* TodoVM_Test.swift in Sources */,
 				BE1A5EF71F7986AE007BA647 /* HTTPClient_Test.swift in Sources */,
 				BE5F7A331F800B960036653F /* Dictionary+OptionalSubscript_Test.swift in Sources */,
+				BEC597C51F80479C00F731C1 /* ActivityPresentable_Test.swift in Sources */,
 				BE5F7A351F800E0B0036653F /* Date+Comparators_Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
