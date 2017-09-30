@@ -25,4 +25,14 @@ class Actions_Todo {
             return nil
         }
     }
+    
+    static func toggleTodo(todo: Todo) -> Store<State>.ActionCreator {
+        return { state, store in
+            guard case let .loggedIn(userID) = state.authState.loginStatus else {
+                return nil
+            }
+            FirebaseTodoController().toggleTodo(uid: userID, todo: todo)
+            return nil
+        }
+    }
 }

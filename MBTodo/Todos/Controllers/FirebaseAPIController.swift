@@ -38,6 +38,17 @@ class FirebaseTodoController {
         ref.child("users").child(uid).child("todos").childByAutoId().setValue(todo)
     }
     
+    func toggleTodo(uid: String, todo: Todo) {
+        let ref = Database.database().reference()
+        let todoUpdated : [String : Any] = [
+            "completed"     : !(todo.completed ?? true),
+            "createdAt"     : (todo.createdAt ?? Date()).timeIntervalSince1970,
+            "text"          : todo.text ?? "",
+            "completedAt"   : Int(Date().timeIntervalSince1970)
+        ]
+        ref.child("users").child(uid).child("todos").child(todo.key ?? "").setValue(todoUpdated)
+    }
+    
     func mapFirebaseObjects(dict: Dictionary<String, Any>) -> [Todo]? {
         let todoList: [Todo] = dict.keys.flatMap {
             if let todo = dict[$0] as? Dictionary<String, Any> {

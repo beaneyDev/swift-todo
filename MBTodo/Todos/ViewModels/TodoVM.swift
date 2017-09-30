@@ -28,6 +28,6 @@ class TodoVM {
     }
     
     func todoTapped() {
-        
+        store.dispatch(Actions_Todo.toggleTodo(todo: self.todo))
     }
 }

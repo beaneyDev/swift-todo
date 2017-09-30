@@ -29,6 +29,8 @@ class Todo_TableViewCell: UITableViewCell {
         self.lblText.textColor  = vm.completed ? UIColor.lightGray : UIColor.black
         
         if vm.completed {
+            self.checkBox.backgroundColor = UIColor.lightGray
+            
             let attrText = NSMutableAttributedString(string: vm.text)
             attrText.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attrText.length))
             self.lblText.attributedText = attrText
@@ -37,11 +39,20 @@ class Todo_TableViewCell: UITableViewCell {
             attrCreatedAt.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attrCreatedAt.length))
             self.lblCreated.attributedText = attrCreatedAt
         } else {
+            self.checkBox.backgroundColor = UIColor.white
+            
             self.lblText.attributedText = nil
             self.lblCreated.attributedText = nil
-            
             self.lblText.text       = vm.text
             self.lblCreated.text    = vm.createdAt
         }
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(Todo_TableViewCell.todoTapped))
+        self.checkBox.addGestureRecognizer(gesture)
+        self.checkBox.isUserInteractionEnabled = true
+    }
+    
+    func todoTapped() {
+        self.todoVM?.todoTapped()
     }
 }
