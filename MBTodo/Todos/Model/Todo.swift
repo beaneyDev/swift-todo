@@ -26,6 +26,6 @@ struct Todo {
 
 extension Todo: Equatable {
     static func == (lhs: Todo, rhs: Todo) -> Bool {
-        return lhs.key == rhs.key
+        return lhs.key == rhs.key && lhs.completed == rhs.completed
     }
 }

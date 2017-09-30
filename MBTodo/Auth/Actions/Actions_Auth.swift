@@ -23,6 +23,20 @@ struct ShowAuthError: Action {
 
 class Actions_Auth {
     /**
+     Refreshes user login
+     - parameters:
+     - state: application state.
+     - store: store that dispatches actions.
+     */
+    static func refreshLogin(state: State, store: Store<State>) -> Action? {
+        if let currentUser = Auth.auth().currentUser {
+            return SetUser(uid: currentUser.uid)
+        }
+        
+        return nil
+    }
+    
+    /**
      Begins login flow by redirecting the user to GitHub.
      - returns: An async action that continues the authorisation chain.
     */

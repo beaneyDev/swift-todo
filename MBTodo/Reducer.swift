@@ -20,19 +20,24 @@ func authReducer(action: Action, state: State_Auth?) -> State_Auth {
     switch action {
     case let action as SetUser:
         if var newState = state {
-            newState.uid = action.uid
+            newState.loginStatus = LoginStatus.loggedIn(uid: action.uid)
             return newState
         }
     case let action as ShowAuthError:
         if var newState = state {
-            newState.uid = nil
+            if let error = action.error {
+                newState.loginStatus = .loginErrored(error: error)
+            } else {
+                newState.loginStatus = .notLoggedIn
+            }
+            
             return newState
         }
     default:
         break
     }
     
-    return state ?? State_Auth(uid: nil)
+    return state ?? State_Auth(loginStatus: .notLoggedIn)
 }
 
 func todoReducer(action: Action, state: State_Todos?) -> State_Todos {

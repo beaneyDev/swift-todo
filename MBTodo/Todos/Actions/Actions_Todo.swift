@@ -15,28 +15,13 @@ struct SetTodos: Action {
 }
 
 class Actions_Todo {
-    static func startFetchTodos() -> Store<State>.ActionCreator {
+    static func addTodo(todoText: String) -> Store<State>.ActionCreator {
         return { state, store in
-            guard let userID = state.authState.uid else {
+            guard case let .loggedIn(userID) = state.authState.loginStatus else {
                 return nil
             }
             
-            FirebaseTodoController.fetchTodos(uid: userID, completion: { (result, error) in
-                guard let result = result else {
-                    return
-                }
-                
-                let todoList: [Todo] = result.keys.flatMap {
-                    if let todo = result[$0] as? Dictionary<String, Any> {
-                        return Todo(key: $0, todos: todo)
-                    }
-                    
-                    return nil
-                }
-                
-                store.dispatch(SetTodos(todos: todoList))
-            })
-            
+            FirebaseTodoController().addTodo(uid: userID, todoText: todoText)
             return nil
         }
     }

@@ -15,7 +15,7 @@
 		BE1A5EFA1F7987C1007BA647 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1A5EF91F7987C1007BA647 /* URLSessionProtocol.swift */; };
 		BE1A5EFC1F798DE7007BA647 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1A5EFB1F798DE7007BA647 /* URLSession.swift */; };
 		BE2733F81F744C17004A7D66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2733F71F744C17004A7D66 /* AppDelegate.swift */; };
-		BE2733FA1F744C17004A7D66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2733F91F744C17004A7D66 /* ViewController.swift */; };
+		BE2733FA1F744C17004A7D66 /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2733F91F744C17004A7D66 /* TodoViewController.swift */; };
 		BE2733FD1F744C17004A7D66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2733FB1F744C17004A7D66 /* Main.storyboard */; };
 		BE2733FF1F744C17004A7D66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2733FE1F744C17004A7D66 /* Assets.xcassets */; };
 		BE2734021F744C17004A7D66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2734001F744C17004A7D66 /* LaunchScreen.storyboard */; };
@@ -29,6 +29,11 @@
 		BE27344C1F74664E004A7D66 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE27344B1F74664E004A7D66 /* Reducer.swift */; };
 		BE4368A81F77D6060052D379 /* FirebaseAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4368A71F77D6060052D379 /* FirebaseAuthController.swift */; };
 		BE4368AD1F77E26C0052D379 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4368AC1F77E26C0052D379 /* Networkable.swift */; };
+		BE684E641F7D97CE00F9A1EC /* Date+Comparators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE684E631F7D97CE00F9A1EC /* Date+Comparators.swift */; };
+		BEC22C711F7FD59A0021DBAF /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC22C701F7FD59A0021DBAF /* LaunchViewController.swift */; };
+		BEC22C741F7FD61A0021DBAF /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC22C731F7FD61A0021DBAF /* AuthViewController.swift */; };
+		BEC22C771F7FD6890021DBAF /* AuthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC22C761F7FD6890021DBAF /* AuthVM.swift */; };
+		BEC22C791F7FE24F0021DBAF /* TodoDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC22C781F7FE24F0021DBAF /* TodoDateFormatter.swift */; };
 		BEEE8E8D1F77B1530056F1A1 /* GitHubAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8E8C1F77B1530056F1A1 /* GitHubAuthController.swift */; };
 		BEEE8E911F77B1890056F1A1 /* Actions_Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8E901F77B1890056F1A1 /* Actions_Todo.swift */; };
 		BEEE8E941F77B23D0056F1A1 /* FirebaseAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE8E931F77B23D0056F1A1 /* FirebaseAPIController.swift */; };
@@ -79,7 +84,7 @@
 		BE1A5EFB1F798DE7007BA647 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		BE2733F41F744C17004A7D66 /* MBTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2733F71F744C17004A7D66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BE2733F91F744C17004A7D66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE2733F91F744C17004A7D66 /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
 		BE2733FC1F744C17004A7D66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE2733FE1F744C17004A7D66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE2734011F744C17004A7D66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,6 +103,11 @@
 		BE27344B1F74664E004A7D66 /* Reducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
 		BE4368A71F77D6060052D379 /* FirebaseAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuthController.swift; sourceTree = "<group>"; };
 		BE4368AC1F77E26C0052D379 /* Networkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
+		BE684E631F7D97CE00F9A1EC /* Date+Comparators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Comparators.swift"; sourceTree = "<group>"; };
+		BEC22C701F7FD59A0021DBAF /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		BEC22C731F7FD61A0021DBAF /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		BEC22C761F7FD6890021DBAF /* AuthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVM.swift; sourceTree = "<group>"; };
+		BEC22C781F7FE24F0021DBAF /* TodoDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDateFormatter.swift; sourceTree = "<group>"; };
 		BEEE8E8C1F77B1530056F1A1 /* GitHubAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAuthController.swift; sourceTree = "<group>"; };
 		BEEE8E901F77B1890056F1A1 /* Actions_Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions_Todo.swift; sourceTree = "<group>"; };
 		BEEE8E931F77B23D0056F1A1 /* FirebaseAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAPIController.swift; sourceTree = "<group>"; };
@@ -170,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				BE0A0EA51F77F1EC006F9EA4 /* HTTPController.swift */,
+				BEC22C781F7FE24F0021DBAF /* TodoDateFormatter.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -230,7 +241,6 @@
 				BE2733FB1F744C17004A7D66 /* Main.storyboard */,
 				BE27344B1F74664E004A7D66 /* Reducer.swift */,
 				BE2734461F745A3D004A7D66 /* State.swift */,
-				BE2733F91F744C17004A7D66 /* ViewController.swift */,
 			);
 			path = MBTodo;
 			sourceTree = "<group>";
@@ -275,6 +285,8 @@
 		BE2734331F745524004A7D66 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				BEC22C751F7FD6800021DBAF /* ViewModels */,
+				BEC22C721F7FD6090021DBAF /* ViewControllers */,
 				BE27343E1F7457C5004A7D66 /* Actions */,
 				BEFA26D01F76FE480043FF3C /* Constants */,
 				BEEE8E8B1F77B1430056F1A1 /* Controllers */,
@@ -287,6 +299,7 @@
 		BE27343A1F74562B004A7D66 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
+				BEC22C6F1F7FD5690021DBAF /* ViewControllers */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -307,6 +320,38 @@
 			path = State;
 			sourceTree = "<group>";
 		};
+		BEC22C6F1F7FD5690021DBAF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BEC22C701F7FD59A0021DBAF /* LaunchViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BEC22C721F7FD6090021DBAF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BEC22C731F7FD61A0021DBAF /* AuthViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BEC22C751F7FD6800021DBAF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BEC22C761F7FD6890021DBAF /* AuthVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BEC22C7A1F7FEBB30021DBAF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE2733F91F744C17004A7D66 /* TodoViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		BEEE8E8B1F77B1430056F1A1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +368,7 @@
 				BEEE8E921F77B2280056F1A1 /* Controllers */,
 				BEEE8E981F77B4630056F1A1 /* Model */,
 				BEEE8E951F77B4160056F1A1 /* State */,
+				BEC22C7A1F7FEBB30021DBAF /* ViewControllers */,
 				BEEE8E9F1F77C0610056F1A1 /* ViewModels */,
 				BEEE8EA21F77C12C0056F1A1 /* Views */,
 			);
@@ -377,6 +423,7 @@
 			children = (
 				BEEE8E9D1F77B7FB0056F1A1 /* Dictionary+OptionalSubscript.swift */,
 				BE1A5EFB1F798DE7007BA647 /* URLSession.swift */,
+				BE684E631F7D97CE00F9A1EC /* Date+Comparators.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -715,23 +762,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE2733FA1F744C17004A7D66 /* ViewController.swift in Sources */,
+				BE2733FA1F744C17004A7D66 /* TodoViewController.swift in Sources */,
 				BE2734401F7457D4004A7D66 /* Actions_Auth.swift in Sources */,
 				BE27344C1F74664E004A7D66 /* Reducer.swift in Sources */,
 				BEEE8E911F77B1890056F1A1 /* Actions_Todo.swift in Sources */,
 				BE4368A81F77D6060052D379 /* FirebaseAuthController.swift in Sources */,
 				BEEE8EA11F77C0780056F1A1 /* TodosVM.swift in Sources */,
 				BEEE8E8D1F77B1530056F1A1 /* GitHubAuthController.swift in Sources */,
+				BEC22C741F7FD61A0021DBAF /* AuthViewController.swift in Sources */,
 				BEEE8E941F77B23D0056F1A1 /* FirebaseAPIController.swift in Sources */,
 				BE2733F81F744C17004A7D66 /* AppDelegate.swift in Sources */,
 				BE1A5EFC1F798DE7007BA647 /* URLSession.swift in Sources */,
 				BEEE8E9A1F77B46F0056F1A1 /* Todo.swift in Sources */,
+				BEC22C771F7FD6890021DBAF /* AuthVM.swift in Sources */,
 				BEEE8EAD1F77CD4C0056F1A1 /* OAuth.swift in Sources */,
 				BEEE8EA41F77C1520056F1A1 /* Todo_TableViewCell.swift in Sources */,
+				BEC22C711F7FD59A0021DBAF /* LaunchViewController.swift in Sources */,
 				BEEE8EA61F77C2130056F1A1 /* TodoVM.swift in Sources */,
+				BEC22C791F7FE24F0021DBAF /* TodoDateFormatter.swift in Sources */,
 				BEFA26D21F76FE650043FF3C /* GitHubStrings.swift in Sources */,
 				BE27342A1F744E76004A7D66 /* FirebaseWrapper.swift in Sources */,
 				BE27344A1F745A98004A7D66 /* State_Auth.swift in Sources */,
+				BE684E641F7D97CE00F9A1EC /* Date+Comparators.swift in Sources */,
 				BEF17B701F7C309D007B825A /* CustomErrors.swift in Sources */,
 				BE1A5EFA1F7987C1007BA647 /* URLSessionProtocol.swift in Sources */,
 				BEEE8E971F77B4280056F1A1 /* State_Todos.swift in Sources */,

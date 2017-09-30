@@ -19,6 +19,14 @@ class TodoVM {
         return self.todo.text ?? ""
     }
     
+    var createdAt: String {
+        return "Created: \(TodoDateFormatter.shared.createdAtFormatter.string(from: self.todo.createdAt ?? Date()))"
+    }
+    
+    var completed: Bool {
+        return self.todo.completed ?? false
+    }
+    
     func todoTapped() {
         
     }

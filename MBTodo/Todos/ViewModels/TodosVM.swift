@@ -8,19 +8,61 @@
 
 import Foundation
 import UIKit
+import Firebase
+import ReSwift
 
 class TodosVM: NSObject {
-    var todos: [Todo] = []
+    var todosState  = State_Todos(todos: [])
+    var showCompleted: Bool = false
+    var filterText: String = ""
+    
+    var todos: [Todo] = [Todo]()
+    
+    var databaseReference: DatabaseReference?
+    
+    weak var tableView: UITableView?
     
     init(tableView: UITableView) {
         super.init()
+        store.subscribe(self)
         tableView.delegate      = self
         tableView.dataSource    = self
+        self.tableView = tableView
+        
+        guard case let LoginStatus.loggedIn(uid: uid) = store.state.authState.loginStatus else {
+            return
+        }
+        
+        self.databaseReference = FirebaseTodoController().observeTodos(uid: uid) { (todos, error) in
+            guard let todos = todos else {
+                return
+            }
+            
+            store.dispatch(SetTodos(todos: todos))
+        }
     }
     
-    func loadWithData(todos: [Todo], tableView: UITableView) {
+    func reload() {
+        self.loadWithData(todos: self.todosState.todos)
+    }
+    
+    func loadWithData(todos: [Todo]) {
+        var todos = todos
+        
+        if !self.showCompleted {
+            todos = todos.filter {
+                !($0.completed ?? false)
+            }
+        }
+        
+        if !self.filterText.isEmpty {
+            todos = todos.filter {
+                ($0.text ?? "").contains(self.filterText)
+            }
+        }
+        
         self.todos = todos
-        tableView.reloadData()
+        self.tableView?.reloadData()
     }
 }
 
@@ -43,5 +85,20 @@ extension TodosVM: UITableViewDataSource {
 extension TodosVM: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+    }
+}
+
+extension TodosVM : StoreSubscriber {
+    /**
+     ReSwift function for ensuring we get store updates.
+     */
+    func newState(state: State) {
+        //Are there new todos?
+        if state.todosState != self.todosState {
+            self.todosState = state.todosState
+            self.loadWithData(todos: self.todosState.todos)
+        } else {
+            print("Todos state the same.")
+        }
     }
 }
