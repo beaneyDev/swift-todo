@@ -56,6 +56,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="filter:" destination="BYZ-38-t0r" eventType="editingChanged" id="qqV-y9-nek"/>
+                                                </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kfo-9o-gct">
                                                 <rect key="frame" x="8" y="79" width="343" height="1"/>
@@ -236,6 +239,7 @@
                         <outlet property="container" destination="N22-hm-pMB" id="F4A-7t-Un2"/>
                         <outlet property="tableView" destination="2E0-qv-ydv" id="72T-0t-IgX"/>
                         <outlet property="txtFieldAdd" destination="JJY-5q-UaK" id="uIz-Sz-IrP"/>
+                        <outlet property="txtFieldSearch" destination="hu9-ht-Rbc" id="XEe-2D-teS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

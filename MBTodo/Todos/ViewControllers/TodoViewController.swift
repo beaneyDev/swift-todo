@@ -16,6 +16,8 @@ class TodoViewController: UIViewController {
     ///UI Components.
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var txtFieldAdd: UITextField!
+    @IBOutlet weak var txtFieldSearch: UITextField!
+    
     @IBOutlet weak var container: UIView! {
         didSet {
             container.layer.borderColor = UIColor.lightGray.cgColor
@@ -29,6 +31,11 @@ class TodoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.todosVM = TodosVM(tableView: self.tableView)
+    }
+    
+    @IBAction func filter(_ sender: Any) {
+        self.todosVM?.filterText = self.txtFieldSearch.text ?? ""
+        self.todosVM?.reload()
     }
     
     @IBAction func toggleShowCompleted(_ sender: UISwitch) {
