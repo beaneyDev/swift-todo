@@ -9,7 +9,7 @@
 import Foundation
 import ReSwift
 
-protocol AuthListener {
+protocol AuthListener: class {
     func userAuthorised(uid: String)
     func userNotLoggedIn()
     func userLoginErrored(error: Error)
@@ -17,17 +17,21 @@ protocol AuthListener {
 
 class AuthVM : NSObject {
     var authState       : State_Auth?
-    var authListener    : AuthListener?
+    weak var authListener    : AuthListener?
     
     init(listener: AuthListener) {
         super.init()
         self.authListener = listener
         store.dispatch(Actions_Auth.refreshLogin(state:store:))
-        store.subscribe(self)
+        self.subscribe()
     }
     
     func login() {
         store.dispatch(Actions_Auth.initiateSSOLogin())
+    }
+    
+    func logout() {
+        store.dispatch(Actions_Auth.logout(state:store:))
     }
 }
 
@@ -53,14 +57,11 @@ extension AuthVM : StoreSubscriber {
         }
     }
     
-    func unsubscribe() {
-        store.unsubscribe(self)
+    func subscribe() {
+        store.subscribe(self)
     }
     
-    /**
-     No valid user, pls, login.
-     */
-    func handleInvalidUser(state: State) {
-        
+    func unsubscribe() {
+        store.unsubscribe(self)
     }
 }

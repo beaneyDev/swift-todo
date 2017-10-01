@@ -16,6 +16,10 @@ struct SetUser: Action {
     var uid: String
 }
 
+struct ClearUser: Action {
+    
+}
+
 ///If there is an error of any kind, show it.
 struct ShowAuthError: Action {
     var error: Error?
@@ -88,5 +92,9 @@ class Actions_Auth {
             
             return nil
         }
+    }
+    
+    static func logout(state: State, store: Store<State>) -> Action? {
+        return FirebaseAuthController().logout() ? ClearUser() : nil
     }
 }

@@ -27,10 +27,20 @@ class TodoViewController: UIViewController {
     
     //VMs
     var todosVM: TodosVM?
+    var authVM: AuthVM?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.todosVM = TodosVM(tableView: self.tableView, fetcher: FirebaseTodoController())
+        self.authVM = AuthVM(listener: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.authVM?.subscribe()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.authVM?.unsubscribe()
     }
     
     @IBAction func filter(_ sender: Any) {
@@ -52,5 +62,34 @@ class TodoViewController: UIViewController {
         self.txtFieldAdd.text = ""
     }
     
+    @IBAction func logout(_ sender: Any) {
+        self.authVM?.logout()
+    }
+}
+
+extension TodoViewController : AuthListener {
+    func userNotLoggedIn() {
+        if self.navigationController?.viewControllers[1] is AuthViewController {
+            self.navigationController?.popViewController(animated: true)
+            return
+        }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "login") as? AuthViewController else {
+            return
+        }
+        
+        self.navigationController?.viewControllers.insert(vc, at: 1)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    func userAuthorised(uid: String) {
+        
+    }
+    
+    func userLoginErrored(error: Error) {
+        
+    }
 }
 

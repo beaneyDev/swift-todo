@@ -17,6 +17,10 @@ class AuthViewController : UIViewController, AuthListener, ActivityPresentable {
         self.authVM = AuthVM(listener: self)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.authVM?.subscribe()
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         self.authVM?.unsubscribe()
     }
@@ -28,6 +32,7 @@ class AuthViewController : UIViewController, AuthListener, ActivityPresentable {
     
     func userAuthorised(uid: String) {
         on.main {
+            self.removeActivityView()
             self.performSegue(withIdentifier: "home", sender: nil)
         }
     }

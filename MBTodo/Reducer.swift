@@ -33,6 +33,11 @@ func authReducer(action: Action, state: State_Auth?) -> State_Auth {
             
             return newState
         }
+    case let action as ClearUser:
+        if var newState = state {
+            newState.loginStatus = .notLoggedIn
+            return newState
+        }
     default:
         break
     }

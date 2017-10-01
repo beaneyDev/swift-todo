@@ -21,4 +21,13 @@ class FirebaseAuthController: OAuthTokenValidator {
             completion(user.uid, nil)
         }
     }
+    
+    func logout() -> Bool {
+        do {
+            try Auth.auth().signOut()
+            return true
+        } catch {
+            return false
+        }
+    }
 }

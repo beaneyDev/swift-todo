@@ -224,6 +224,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1P-wk-5Gw">
+                                <rect key="frame" x="307" y="9" width="52" height="30"/>
+                                <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="logout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kIi-Dc-icR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -231,8 +238,10 @@
                             <constraint firstItem="N22-hm-pMB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="EV9-SV-KdF"/>
                             <constraint firstItem="rsu-rn-7Ie" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="ITS-wy-hgS"/>
                             <constraint firstItem="rsu-rn-7Ie" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PZ5-sq-Bde"/>
+                            <constraint firstAttribute="trailing" secondItem="n1P-wk-5Gw" secondAttribute="trailing" constant="16" id="RuF-qJ-3X9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="N22-hm-pMB" secondAttribute="bottom" constant="8" id="aZZ-xg-Avu"/>
                             <constraint firstAttribute="trailing" secondItem="N22-hm-pMB" secondAttribute="trailing" constant="8" id="cLN-BP-hMM"/>
+                            <constraint firstItem="n1P-wk-5Gw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="9" id="sHS-Ww-yUP"/>
                         </constraints>
                     </view>
                     <connections>
@@ -249,7 +258,7 @@
         <!--Auth View Controller-->
         <scene sceneID="Haq-Sb-Ypc">
             <objects>
-                <viewController id="hbI-k6-yGO" customClass="AuthViewController" customModule="MBTodo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="hbI-k6-yGO" customClass="AuthViewController" customModule="MBTodo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c7z-6I-OGW"/>
                         <viewControllerLayoutGuide type="bottom" id="6KB-T4-2zn"/>
